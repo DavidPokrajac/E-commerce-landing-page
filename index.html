@@ -1,44 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+  <link rel="stylesheet" type="text/css" href="styles/main.css" />
+  <link rel="stylesheet" type="text/css" href="styles/header.css" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
   <title>Frontend Mentor | E-commerce product page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
 
-  Collections
-  Men
-  Women
-  About
-  Contact
+  <div class="container">
 
-  Sneaker Company
+    <header>
+      <h1>Sneakers</h1>
 
-  Fall Limited Edition Sneakers
+      <nav>
+        <ul>
+          <li>Collections</li>
+          <li>Men</li>
+          <li>Women</li>
+          <li>About</li>
+          <li>Contact</li>
+        </ul>
+      </nav>
 
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
+      <div class="user-info">
+        <div>
+          <img src="/images/icon-cart.svg" width="25" height="25" title="Shopping Cart" alt="A shopping cart." />
+          <img src="/images/image-avatar.png" width="45" height="45" title="A user's avatar" alt="A user's avatar." />
+        </div>
+      </div>
+    </header>
 
-  $125.00
-  50%
-  $250.00
+    <main>
+      <section class="img-container">
+        <div class="active-img">
+          <img src="images/image-product-1.jpg" />
+        </div>
+        <div class="img-carousel">
+          <img src="images/image-product-1-thumbnail.jpg" />
+          <img src="images/image-product-2-thumbnail.jpg" />
+          <img src="images/image-product-3-thumbnail.jpg" />
+          <img src="images/image-product-4-thumbnail.jpg" />
+        </div>
+      </section>
+      <section class="item-description">
+        <h3>Sneaker Company</h3>
+        <h1>Fall Limited Edition Sneakers</h1>
+        <p>These low-profile sneakers areyour perfect casual wear companion. Featuring a durable rubber outer sole,
+          they'll withstand everything the weather can offer.
+        </p>
+        <section class="price-info">
+          <div class="current-price">
+            <span>$125.00</span>
+            <span class="discount">50%</span>
+          </div>
+          <div class="original-price">
+            <span>$250.00</span>
+          </div>
+        </section>
+        <section class="cart-container">
+          <div>
+            <button>
+              <span><img src="images/icon-minus.svg" /></span>
+                0
+              <span><img src="images/icon-plus.svg" /></span>
+            </button>
+          </div>
+          <div class="add-to-cart">
+            <button>
+              <img src="images/icon-cart.svg" />
+              Add to cart
+            </button>
+          </div>
+        </section>
+      </section>
+    </main>
 
-  0
-  Add to cart
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
   </div>
+  
 </body>
 </html>

@@ -1,0 +1,21 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+.container {
+    width: 85%;
+    height: 80%;
+    padding: 0 5%;
+}
