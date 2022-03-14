@@ -1,17 +1,21 @@
+$primary-orange: hsl(26, 100%, 55%);
+
 .container header {
     display: flex;
     flex-direction: initial;
     justify-content: space-between;
+    height: 75px;
 }
 
-h1 {
-    text-transform: lowercase;
+.title {
+    padding: 1rem 0 2rem 0;
 }
 
 nav {
     margin-left: 1rem;
     display: flex;
     flex-grow: 1;
+    height: inherit;
 }
 
 nav ul {
@@ -21,22 +25,59 @@ nav ul {
 }
 
 nav ul li {
-    padding: 1rem;
+    padding: 1rem 1rem 2rem 1rem;
+
+    &:hover {
+        border-bottom: 3px solid $primary-orange;
+        cursor: pointer;
+        color: black;
+    }
 }
 
 header {
     border-bottom: 1px solid hsl(220, 14%, 75%);
     display: flex;
     align-items: center;
-    padding: 3rem 0;
+    padding: 0;
 }
 
 .user-info {
     width: 15%;
-}
-
-.user-info div {
+    height: inherit;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-bottom: 2rem;
+    position: relative;
+}
+
+.user-info .shopping-cart-item:hover {
+    filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(89deg) brightness(94%) contrast(103%);
+}
+
+.user-info img:hover {
+    cursor: pointer;
+}
+
+.user-info img:last-child {
+    border-radius: 50%;
+}
+
+.user-info img:last-child:hover {
+    border: 2px solid $primary-orange;
+}
+
+.items-counter {
+    display: flex;
+    justify-content: center;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    font-size: 0.8rem;
+    top: 5px;
+    left: 10px;
+    background-color: $primary-orange;
+    color: white;
+    font-weight: bold;
+    border-radius: 50%;
 }

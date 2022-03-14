@@ -8,18 +8,56 @@
 
   <link rel="stylesheet" type="text/css" href="styles/main.css" />
   <link rel="stylesheet" type="text/css" href="styles/header.css" />
+  <link rel="stylesheet" type="text/css" href="styles/mainContent.css" />
 
   <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
   <title>Frontend Mentor | E-commerce product page</title>
 
+  <script defer src="scripts/script.js" type="text/javascript"></script>
+
 </head>
 <body>
+  <div class="modal inactive">
+    <div class="close-modal">
+      <img src="images/icon-close.svg" width="15" />
+    </div>
+    <div class="modal-active-img">
+      <div class="previous-image">
+        <img src="images/icon-previous.svg" />
+      </div>
+      <img src="images/image-product-1.jpg" width="300" />
+      <div class="next-image">
+        <img src="images/icon-next.svg" />
+      </div>
+    </div>
+    <div class="modal-img-carousel">
+      <span data-active="true"><img src="images/image-product-1-thumbnail.jpg" /></span>
+      <span data-active="false"><img src="images/image-product-2-thumbnail.jpg" /></span>
+      <span data-active="false"><img src="images/image-product-3-thumbnail.jpg" /></span>
+      <span data-active="false"><img src="images/image-product-4-thumbnail.jpg" /></span>
+    </div>
+  </div>
+
+  <div id="side-nav" class="inactive">
+    <ul>  
+      <li id="exit-nav">
+        <img src="images/icon-close.svg" />
+      </li>
+      <li>Collections</li>
+      <li>Men</li>
+      <li>Women</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
+  </div>
 
   <div class="container">
 
     <header>
-      <h1>Sneakers</h1>
+      <span class="side-menu"><img src="images/icon-menu.svg" /></span>
+
+      <div class="title"><img src="images/logo.svg" /></div>
 
       <nav>
         <ul>
@@ -32,32 +70,35 @@
       </nav>
 
       <div class="user-info">
-        <div>
-          <img src="/images/icon-cart.svg" width="25" height="25" title="Shopping Cart" alt="A shopping cart." />
-          <img src="/images/image-avatar.png" width="45" height="45" title="A user's avatar" alt="A user's avatar." />
-        </div>
+        <span class="items-counter show">0</span>
+        <img class="shopping-cart-icon" src="/images/icon-cart.svg" title="Shopping Cart" alt="A shopping cart." />
+        <img src="/images/image-avatar.png" width="45" height="45" title="A user's avatar" alt="A user's avatar." />
       </div>
     </header>
 
     <main>
       <section class="img-container">
+
         <div class="active-img">
-          <img src="images/image-product-1.jpg" />
+          
+          <img src="images/image-product-1.jpg" width="300" />
+         
         </div>
         <div class="img-carousel">
-          <img src="images/image-product-1-thumbnail.jpg" />
-          <img src="images/image-product-2-thumbnail.jpg" />
-          <img src="images/image-product-3-thumbnail.jpg" />
-          <img src="images/image-product-4-thumbnail.jpg" />
+          <span data-active="true"><img src="images/image-product-1-thumbnail.jpg" width="100" /></span>
+          <span data-active="false"><img src="images/image-product-2-thumbnail.jpg" width="100" /></span>
+          <span data-active="false"><img src="images/image-product-3-thumbnail.jpg" width="100" /></span>
+          <span data-active="false"><img src="images/image-product-4-thumbnail.jpg" width="100" /></span>
         </div>
       </section>
+      
       <section class="item-description">
         <h3>Sneaker Company</h3>
-        <h1>Fall Limited Edition Sneakers</h1>
-        <p>These low-profile sneakers areyour perfect casual wear companion. Featuring a durable rubber outer sole,
+        <h1 class="product-name">Fall Limited Edition Sneakers</h1>
+        <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole,
           they'll withstand everything the weather can offer.
         </p>
-        <section class="price-info">
+        <div class="price-info">
           <div class="current-price">
             <span>$125.00</span>
             <span class="discount">50%</span>
@@ -65,22 +106,22 @@
           <div class="original-price">
             <span>$250.00</span>
           </div>
-        </section>
-        <section class="cart-container">
-          <div>
-            <button>
-              <span><img src="images/icon-minus.svg" /></span>
-                0
-              <span><img src="images/icon-plus.svg" /></span>
+        </div>
+        <div class="cart-container">
+          <div class="items-count">
+            <button id="cart-counter">
+              <span><img class="decrement" src="images/icon-minus.svg" /></span>
+                <i>0</i>
+              <span><img class="increment" src="images/icon-plus.svg" data-plus="0" /></span>
             </button>
           </div>
           <div class="add-to-cart">
             <button>
-              <img src="images/icon-cart.svg" />
+              <img class="cart" src="images/icon-cart.svg" />
               Add to cart
             </button>
           </div>
-        </section>
+        </div>
       </section>
     </main>
 
