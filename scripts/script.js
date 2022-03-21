@@ -101,6 +101,8 @@ let bold = document.createElement("strong");
 productDets.append(productName);
 productDets.append(productAmount);
 let img = document.createElement("img");
+img.src = "images/image-product-1.jpg";
+img.alt = "A pair of shoes";
 img.classList.add("product-img");
 let deleteProduct = document.createElement("img");
 deleteProduct.src = "images/icon-delete.svg";
